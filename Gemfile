@@ -24,11 +24,50 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 group :development, :test do
+  # Standard Development-Test Gems
+  gem 'faker'
   # Call 'pry-byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
 end
 
 group :development do
+  # Standard Development Gems
+  gem 'bullet'
+  gem 'lol_dba'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'letter_opener'
+  gem 'rack-mini-profiler'
+  gem 'rails_best_practices'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Tools & Utilities
+gem 'config'
+gem 'exception_notification'
+gem 'rest-client'
+gem 'slim-rails'
+
+# Back-end
+gem 'aasm'
+gem 'activeadmin', github: 'activeadmin'
+gem 'ahoy_matey'
+gem 'cancancan'
+gem 'cloudinary'
+gem 'devise'
+gem 'elasticsearch'
+gem 'friendly_id'
+gem 'geocoder'
+gem 'impressionist'
+gem 'kaminari'
+gem 'meta-tags'
+gem 'nprogress-rails'
+gem 'public_activity'
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+gem 'ruby-mailchecker'
+
+# Front-end
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
