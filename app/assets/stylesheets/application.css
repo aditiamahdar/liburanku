@@ -12,6 +12,8 @@
  *
  * Import SASS (Bootstrap & FontAwesome)
  *= require imported
+ *= require nprogress
+ *= require nprogress-bootstrap
  *
  * Custom CSS
  *= require custom
