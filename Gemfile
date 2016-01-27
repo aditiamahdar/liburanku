@@ -52,7 +52,6 @@ gem 'slim-rails'
 # Back-end
 gem 'aasm'
 gem 'activeadmin', github: 'activeadmin'
-gem 'ahoy_matey'
 gem 'cancancan'
 gem 'cloudinary'
 gem 'devise'
