@@ -70,3 +70,7 @@ gem 'ruby-mailchecker'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'nprogress-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-Bootflat'
+end

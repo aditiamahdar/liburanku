@@ -18,6 +18,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     aasm (4.7.0)
     actionmailer (4.2.5)
@@ -223,6 +224,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5)
       sprockets-rails
+    rails-assets-Bootflat (2.0.4)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -355,6 +357,7 @@ DEPENDENCIES
   quiet_assets
   rack-mini-profiler
   rails (= 4.2.5)
+  rails-assets-Bootflat!
   rails_best_practices
   refile
   refile-mini_magick
