@@ -12,6 +12,7 @@
  *
  * Import SASS (Bootstrap & FontAwesome)
  *= require imported
+ *= require Bootflat/bootflat/css/bootflat
  *= require nprogress
  *= require nprogress-bootstrap
  *
