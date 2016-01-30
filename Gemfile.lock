@@ -225,6 +225,10 @@ GEM
       railties (= 4.2.5)
       sprockets-rails
     rails-assets-Bootflat (2.0.4)
+    rails-assets-animate.css (3.5.1)
+    rails-assets-jquery (2.2.0)
+    rails-assets-parsleyjs (2.1.3)
+      rails-assets-jquery (> 1.8)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -326,49 +330,51 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aasm
+  aasm!
   activeadmin!
-  bootstrap-sass
-  bullet
-  cancancan
-  cloudinary
-  coffee-rails (~> 4.1.0)
-  config
-  devise
-  elasticsearch
-  exception_notification
-  faker
-  font-awesome-sass
-  friendly_id
-  geocoder
-  impressionist
-  jbuilder (~> 2.0)
-  jquery-rails
-  kaminari
-  letter_opener
-  lol_dba
-  meta-tags
-  nprogress-rails
-  pg (~> 0.15)
-  pry-byebug
-  pry-rails
-  public_activity
-  puma
-  quiet_assets
-  rack-mini-profiler
-  rails (= 4.2.5)
+  bootstrap-sass!
+  bullet!
+  cancancan!
+  cloudinary!
+  coffee-rails (~> 4.1.0)!
+  config!
+  devise!
+  elasticsearch!
+  exception_notification!
+  faker!
+  font-awesome-sass!
+  friendly_id!
+  geocoder!
+  impressionist!
+  jbuilder (~> 2.0)!
+  jquery-rails!
+  kaminari!
+  letter_opener!
+  lol_dba!
+  meta-tags!
+  nprogress-rails!
+  pg (~> 0.15)!
+  pry-byebug!
+  pry-rails!
+  public_activity!
+  puma!
+  quiet_assets!
+  rack-mini-profiler!
+  rails (= 4.2.5)!
   rails-assets-Bootflat!
-  rails_best_practices
-  refile
-  refile-mini_magick
-  rest-client
-  ruby-mailchecker
-  sass-rails (~> 5.0)
-  sdoc (~> 0.4.0)
-  slim-rails
-  spring
-  turbolinks
-  uglifier (>= 1.3.0)
+  rails-assets-animate.css!
+  rails-assets-parsleyjs!
+  rails_best_practices!
+  refile!
+  refile-mini_magick!
+  rest-client!
+  ruby-mailchecker!
+  sass-rails (~> 5.0)!
+  sdoc (~> 0.4.0)!
+  slim-rails!
+  spring!
+  turbolinks!
+  uglifier (>= 1.3.0)!
 
 BUNDLED WITH
    1.11.2
