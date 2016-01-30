@@ -1,9 +1,24 @@
 $dodger-blue: #19B5FE;
 $picton-blue: #22A7F0;
 $white: #FFFFFF;
+$red: #CC181E;
 
-body{
+body {
   font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
 @import "navbar";
+
+// Override NProgress
+#nprogress {
+  .bar {
+    background: $red;
+  }
+  .spinner-icon {
+    border-top-color: $red;
+    border-left-color: $red;
+  }
+  .peg {
+    box-shadow: 0 0 10px $red, 0 0 5px $red;
+  }
+}
