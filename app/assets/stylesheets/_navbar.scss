@@ -1,3 +1,9 @@
+// Mostly used for :hover, :focus and :active
+.blue-in-white {
+  background-color: $white;
+  color: $picton-blue;
+}
+
 .navbar {
   border: none;
 }
@@ -9,22 +15,48 @@
   .navbar-header {
     .navbar-brand {
       color: $white;
+      margin-right: 15px;
     }
   }
 
+  // zero margin top and bottom for navbar
+  .navbar-nav {
+    margin: 0 -15px;
+  }
+
+  // navbar li items
   .navbar-nav > li > a {
     color: $white;
-    &:hover {
-      background-color: $white;
-      color: $picton-blue;
+    &:hover, &:focus, &:active {
+      @extend .blue-in-white;
     }
   }
 
+  // li items in navbar dropdown
+  .navbar-nav .open .dropdown-menu > li > a {
+    color: $white;
+  }
+
+  .dropdown-menu {
+    background-color: #434a54;
+    padding: 0;
+  }
+
+  // when navbar dropdown open
+  .navbar-nav > .open > a {
+    @extend .blue-in-white;
+    &:hover, &:focus, &:active {
+      @extend .blue-in-white;
+    }
+  }
+
+  // toggle when (< 768px)
   .navbar-toggle {
     background-color: $white;
     border-color: $picton-blue;
-    &:hover, &:focus {
-      @extend .navbar-toggle;
+    &:hover, &:focus, &:active {
+      background-color: $white;
+      border-color: $picton-blue;
     }
     .icon-bar {
       background-color: $dodger-blue;
@@ -34,4 +66,8 @@
   .navbar-collapse {
     border-color: $picton-blue;
   }
+}
+
+.caret {
+  margin-left: 10px;
 }
