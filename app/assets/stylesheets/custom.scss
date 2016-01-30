@@ -1,35 +1,9 @@
-$main-blue: #19B5FE;
+$dodger-blue: #19B5FE;
 $picton-blue: #22A7F0;
 $white: #FFFFFF;
-
-// navbar
-.navbar-blue{
-  background-color: $main-blue;
-  border-color: $picton-blue;
-
-  .navbar-header{
-    .navbar-brand{
-      color: $white;
-    }
-  }
-
-  .navbar-nav{
-    li > a{
-      color: $white;
-      &:hover{
-        color: $picton-blue;
-        background-color: $white;
-      }
-    }
-  }
-}
-.navbar-no-radius{
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -o-border-radius: 0px;
-}
 
 body{
   font-family: 'Lato', 'Open Sans', sans-serif;
 }
+
+@import "navbar";

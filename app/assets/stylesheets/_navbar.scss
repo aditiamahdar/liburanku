@@ -1,0 +1,18 @@
+.navbar-default {
+  background-color: $dodger-blue;
+  border-color: $picton-blue;
+
+  .navbar-header {
+    .navbar-brand {
+      color: $white;
+    }
+  }
+
+  .navbar-nav > li > a {
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $picton-blue;
+    }
+  }
+}
