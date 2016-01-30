@@ -15,4 +15,15 @@
       color: $picton-blue;
     }
   }
+
+  .navbar-toggle {
+    background-color: $white;
+    border-color: $picton-blue;
+    &:hover, &:focus {
+      @extend .navbar-toggle;
+    }
+    .icon-bar {
+      background-color: $dodger-blue;
+    }
+  }
 }
