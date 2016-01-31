@@ -1,10 +1,11 @@
 $dodger-blue: #19B5FE;
 $picton-blue: #22A7F0;
 $white: #FFFFFF;
+$gray: #E9EAED;
 $red: #CC181E;
 
 body {
-  background-color: #e9eaed;
+  background-color: $gray;
   font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
