@@ -4,6 +4,7 @@ $white: #FFFFFF;
 $red: #CC181E;
 
 body {
+  background-color: #e9eaed;
   font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
@@ -21,4 +22,9 @@ body {
   .peg {
     box-shadow: 0 0 10px $red, 0 0 5px $red;
   }
+}
+
+// Fix Checkbox Offset
+.checkbox {
+  margin-left: 20px;
 }
