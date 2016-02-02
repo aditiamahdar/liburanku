@@ -6,7 +6,7 @@ $red: #CC181E;
 
 body {
   background-color: $gray;
-  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 @import "navbar";
@@ -27,5 +27,5 @@ body {
 
 // Fix Checkbox Offset
 .checkbox {
-  margin-left: 20px;
+  margin-left: 16px;
 }
