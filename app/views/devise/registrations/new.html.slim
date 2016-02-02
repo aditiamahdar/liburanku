@@ -2,28 +2,42 @@
   .col-md-offset-3.col-md-6
     .panel.panel-default
       .panel-body
-        h2.text-center Registration
+        h4.text-center Register with Facebook or Twitter
         hr
-        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        .row
+          .col-md-6
+            = link_to "javascript:void(0)", class: "btn btn-block btn-social btn-facebook"
+              span.fa.fa-facebook
+              | Register with Facebook
+          .col-md-6
+            = link_to "javascript:void(0)", class: "btn btn-block btn-social btn-twitter"
+              span.fa.fa-twitter
+              | Register with Twitter
+
+    .panel.panel-default
+      .panel-body
+        h4.text-center Or... Register with your Email Address
+        hr
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-horizontal" }) do |f|
           = devise_error_messages!
 
           .form-group
-            = f.label :name
-            = f.text_field :name, autofocus: true, class: "form-control"
+            = f.label :name, class: "col-sm-2 control-label"
+            .col-sm-10
+              = f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name"
 
           .form-group
-            = f.label :email
-            = f.email_field :email, class: "form-control"
+            = f.label :email, class: "col-sm-2 control-label"
+            .col-sm-10
+              = f.email_field :email, class: "form-control", placeholder: "Email"
 
           .form-group
-            = f.label :password
-            = f.password_field :password, autocomplete: "off", class: "form-control"
-            - if @minimum_password_length
-              .help-block = "#{@minimum_password_length} characters minimum"
-
-          .form-group
-            = f.label :password_confirmation
-            = f.password_field :password_confirmation, autocomplete: "off", class: "form-control"
+            = f.label :password, class: "col-sm-2 control-label"
+            .col-sm-10
+              = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password"
+              - if @minimum_password_length
+                .help-block = "#{@minimum_password_length} characters minimum"
+              = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password"
 
           .text-right
             = f.submit "Register", class: "btn btn-primary btn-lg"
