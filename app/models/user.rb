@@ -3,4 +3,10 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Image Attachement
+  mount_uploader :avatar, AvatarUploader
+
+  # Validations
+  validates :name, presence: true
 end

@@ -19,7 +19,7 @@ nav.navbar.navbar-default.navbar-static-top
         - if user_signed_in?
           li.dropdown
             a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
-              = image_tag "avatar.jpg", class: "img-circle avatar-nav"
+              = image_tag current_user.avatar.thumb, class: "img-circle avatar-nav"
               = current_user.name
               span.caret
             ul.dropdown-menu

@@ -52,6 +52,8 @@ source 'https://rubygems.org' do
   gem 'aasm'
   gem 'activeadmin', github: 'activeadmin'
   gem 'cancancan'
+  gem 'mini_magick'
+  gem 'carrierwave'
   gem 'cloudinary'
   gem 'devise'
   gem 'elasticsearch'
@@ -61,8 +63,6 @@ source 'https://rubygems.org' do
   gem 'kaminari'
   gem 'meta-tags'
   gem 'public_activity'
-  gem 'refile', require: 'refile/rails'
-  gem 'refile-mini_magick'
   gem 'ruby-mailchecker'
 
   # Front-end

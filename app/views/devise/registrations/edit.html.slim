@@ -4,8 +4,14 @@
       .panel-body
         h4.text-center Edit Profile
         hr
-        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal" }) do |f|
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal", multipart: true }) do |f|
           = devise_error_messages!
+
+          .form-group.text-center
+            = image_tag(resource.avatar.url, class: "img-thumbnail img-circle", id: "avatar-preview")
+            br
+            = f.file_field :avatar
+            = f.hidden_field :avatar_cache
 
           .form-group
             = f.label "Nama", class: "col-sm-2 control-label"
@@ -38,3 +44,9 @@
         p.text-center Tidak senang? Anda bisa menghapus akun anda kapapun.
         hr
         = button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda yakin?" }, method: :delete, class: "btn btn-danger btn-lg btn-block"
+
+javascript:
+  $("#user_avatar").bootstrapFileInput();
+  $("#user_avatar").change(function() {
+    readUploadedPicture(this, "#avatar-preview");
+  });

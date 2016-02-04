@@ -77,6 +77,11 @@ GEM
       uniform_notifier (~> 1.9.0)
     byebug (8.2.1)
     cancancan (1.13.1)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     cloudinary (1.1.2)
       aws_cf_signer
       rest-client
@@ -209,8 +214,6 @@ GEM
     rack (1.6.4)
     rack-mini-profiler (0.9.8)
       rack (>= 1.1.3)
-    rack-protection (1.5.3)
-      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -259,13 +262,6 @@ GEM
       i18n
       polyamorous (~> 1.2)
     rdoc (4.2.1)
-    refile (0.6.2)
-      mime-types
-      rest-client (~> 1.8)
-      sinatra (~> 1.4.5)
-    refile-mini_magick (0.2.0)
-      mini_magick (~> 4.0)
-      refile (~> 0.5)
     require_all (1.3.3)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
@@ -286,10 +282,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sexp_processor (4.6.1)
-    sinatra (1.4.7)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -335,6 +327,7 @@ DEPENDENCIES
   bootstrap-sass!
   bullet!
   cancancan!
+  carrierwave!
   cloudinary!
   coffee-rails (~> 4.1.0)!
   config!
@@ -352,6 +345,7 @@ DEPENDENCIES
   letter_opener!
   lol_dba!
   meta-tags!
+  mini_magick!
   nprogress-rails!
   pg (~> 0.15)!
   pry-byebug!
@@ -365,8 +359,6 @@ DEPENDENCIES
   rails-assets-animate.css!
   rails-assets-parsleyjs!
   rails_best_practices!
-  refile!
-  refile-mini_magick!
   rest-client!
   ruby-mailchecker!
   sass-rails (~> 5.0)!
