@@ -2,26 +2,26 @@
   .col-md-offset-3.col-md-6
     .panel.panel-default
       .panel-body
-        h4.text-center Login to your Existing Account
+        h4.text-center Masuk ke Akun Anda
         hr
         = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal" }) do |f|
 
           .form-group
-            = f.label :email, class: "col-sm-2 control-label"
+            = f.label "Email", class: "col-sm-2 control-label"
             .col-sm-10
               = f.email_field :email, autofocus: true, class: "form-control"
 
           .form-group
-            = f.label :password, class: "col-sm-2 control-label"
+            = f.label "Password", class: "col-sm-2 control-label"
             .col-sm-10
               = f.password_field :password, autocomplete: "off", class: "form-control"
               .checkbox
                 label
                   = f.check_box :remember_me
-                  = "Remember Me"
+                  = "Ingat Saya"
 
           .text-right
-            = f.submit "Login", class: "btn btn-primary btn-lg"
+            = f.submit "Masuk", class: "btn btn-primary btn-lg"
 
     .panel.panel-default
       .panel-body
