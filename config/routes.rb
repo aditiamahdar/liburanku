@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # Pages
   get 'home', to: 'pages#home'
+  get 'features', to: 'pages#features'
+  get 'help', to: 'pages#help'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
 end
