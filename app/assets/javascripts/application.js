@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require nprogress
 //= require nprogress-turbolinks
-//= require bootstrap-file-input
+//= require plugins/bootstrap-file-input
+//= require bootstrap-confirmation2
 //= require custom

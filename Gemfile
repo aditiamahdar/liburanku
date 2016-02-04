@@ -77,6 +77,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-Bootflat'
   # Javascripts
   gem 'rails-assets-parsleyjs'
+  gem 'rails-assets-bootstrap-confirmation2'
   # Stylesheets
   gem 'rails-assets-animate.css'
 end

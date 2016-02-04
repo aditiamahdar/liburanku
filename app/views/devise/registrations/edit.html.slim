@@ -43,10 +43,23 @@
         h4.text-center Hapus Akun
         p.text-center Tidak senang? Anda bisa menghapus akun anda kapapun.
         hr
-        = button_to "Hapus Akun Saya", registration_path(resource_name), data: { confirm: "Anda yakin?" }, method: :delete, class: "btn btn-danger btn-lg btn-block"
+        = button_to "Hapus Akun Saya", registration_path(resource_name), method: :delete, class: "btn btn-danger btn-lg btn-block btn-confirmation"
 
 javascript:
+  // Instant Preview for Choosen Image
   $("#user_avatar").bootstrapFileInput();
   $("#user_avatar").change(function() {
     readUploadedPicture(this, "#avatar-preview");
+  });
+  // Note: This function should be moved to custom.js later
+  $(".btn-confirmation").confirmation({
+    title: "Apakah anda yakin?",
+    singleton: true,
+    popout: true,
+    btnOkLabel: "Iya",
+    btnCancelLabel: "Tidak",
+    btnOkIcon: "",
+    btnCancelIcon: "",
+    btnOkClass: "btn-sm btn-success",
+    btnCancelClass: "btn-sm btn-danger"
   });
