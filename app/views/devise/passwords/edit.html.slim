@@ -1,0 +1,25 @@
+.row
+  .col-md-offset-3.col-md-6
+    .panel.panel-default
+      .panel-body
+        h4.text-center Ubah Password Anda
+        hr
+        = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form-horizontal" }) do |f|
+          = devise_error_messages!
+
+          .form-group
+            = f.label "Password Baru", class: "col-sm-3 control-label"
+            .col-sm-9
+              = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password"
+              - if @minimum_password_length
+                .help-block 6 karakter minimum
+              = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Ketik Ulang Password"
+              = f.hidden_field :reset_password_token
+
+          .text-right
+            = f.submit "Ubah", class: "btn btn-primary btn-lg"
+
+    .panel.panel-default
+      .panel-body
+        ul.list-unstyled
+          = render "devise/shared/links"

@@ -1,0 +1,21 @@
+.row
+  .col-md-offset-3.col-md-6
+    .panel.panel-default
+      .panel-body
+        h4.text-center Lupa Password?
+        hr
+        = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "form-horizontal" }) do |f|
+          = devise_error_messages!
+
+          .form-group
+            = f.label "Email", class: "col-sm-2 control-label"
+            .col-sm-10
+              = f.email_field :email, autofocus: true, class: "form-control"
+
+          .text-right
+            = f.submit "Kirim", class: "btn btn-primary btn-lg"
+
+    .panel.panel-default
+      .panel-body
+        ul.list-unstyled
+          = render "devise/shared/links"
