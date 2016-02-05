@@ -19,3 +19,12 @@ html lang="en"
     .container
       = render "partials/alerts"
       = yield
+
+    footer.footer
+      .container.clearfix
+        .pull-left
+          ul.list-inline
+            - %w[Privasi Cookies Kebijakan Ketentuan Keamanan Bantuan].each do |term|
+              li: small = term
+        .pull-right
+          small TheSpoiler © 2016

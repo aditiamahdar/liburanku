@@ -4,9 +4,24 @@ $white: #FFFFFF;
 $gray: #E9EAED;
 $red: #CC181E;
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0 0 0;
+  width: 100%;
+  color: $white;
+}
+
 body {
   background-color: $gray;
   font-family: 'Lato', sans-serif;
+  // bottom margin for footer height
+  margin-bottom: 40px;
 }
 
 @import "navbar";
