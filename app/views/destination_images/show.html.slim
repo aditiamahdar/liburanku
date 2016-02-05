@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Destination:
+  = @destination_image.destination
+p
+  strong Destination image:
+  = @destination_image.destination_image
+
+= link_to 'Edit', edit_destination_image_path(@destination_image)
+'|
+= link_to 'Back', destination_images_path

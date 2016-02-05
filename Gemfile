@@ -24,7 +24,13 @@ source 'https://rubygems.org' do
 
   group :development, :test do
     # Standard Development-Test Gems
+    gem 'rspec-rails', '~> 3.0'
     gem 'faker'
+    gem 'factory_girl_rails'
+    gem "database_cleaner"
+    gem "poltergeist"
+    gem 'capybara'
+    gem 'selenium-webdriver'
     # Call 'pry-byebug' anywhere in the code to stop execution and get a debugger console
     gem 'pry-byebug'
   end
@@ -56,7 +62,6 @@ source 'https://rubygems.org' do
   gem 'carrierwave'
   gem 'cloudinary'
   gem 'devise'
-  gem 'elasticsearch'
   gem 'friendly_id'
   gem 'geocoder'
   gem 'impressionist'
@@ -64,6 +69,12 @@ source 'https://rubygems.org' do
   gem 'meta-tags'
   gem 'public_activity'
   gem 'ruby-mailchecker'
+
+  # Cache with redis
+  gem 'redis'
+  gem 'redis-namespace'
+  gem 'redis-rails'
+  gem 'redis-rack-cache'
 
   # Front-end
   gem 'bootstrap-sass'

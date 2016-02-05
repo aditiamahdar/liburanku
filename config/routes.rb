@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :destination_images
+  resources :destinations
+  resources :categories
   root to: 'pages#home'
 
   # Devise

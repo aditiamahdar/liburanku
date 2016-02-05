@@ -1,0 +1,43 @@
+h1 Listing destinations
+
+table
+  thead
+    tr
+      th Name
+      th Latitude
+      th Longitude
+      th Logo
+      th Cover
+      th Description
+      th Email
+      th Url
+      th User
+      th Category
+      th Price
+      th Discount
+      th
+      th
+      th
+
+  tbody
+    - @destinations.each do |destination|
+      tr
+        td = destination.name
+        td = destination.latitude
+        td = destination.longitude
+        td = destination.logo
+        td = destination.cover
+        td = destination.description
+        td = destination.email
+        td = destination.url
+        td = destination.user
+        td = destination.category
+        td = destination.price
+        td = destination.discount
+        td = link_to 'Show', destination
+        td = link_to 'Edit', edit_destination_path(destination)
+        td = link_to 'Destroy', destination, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Destination', new_destination_path

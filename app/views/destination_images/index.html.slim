@@ -1,0 +1,23 @@
+h1 Listing destination_images
+
+table
+  thead
+    tr
+      th Destination
+      th Destination image
+      th
+      th
+      th
+
+  tbody
+    - @destination_images.each do |destination_image|
+      tr
+        td = destination_image.destination
+        td = destination_image.destination_image
+        td = link_to 'Show', destination_image
+        td = link_to 'Edit', edit_destination_image_path(destination_image)
+        td = link_to 'Destroy', destination_image, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Destination image', new_destination_image_path

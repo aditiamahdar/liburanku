@@ -1,0 +1,42 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @destination.name
+p
+  strong Latitude:
+  = @destination.latitude
+p
+  strong Longitude:
+  = @destination.longitude
+p
+  strong Logo:
+  = @destination.logo
+p
+  strong Cover:
+  = @destination.cover
+p
+  strong Description:
+  = @destination.description
+p
+  strong Email:
+  = @destination.email
+p
+  strong Url:
+  = @destination.url
+p
+  strong User:
+  = @destination.user
+p
+  strong Category:
+  = @destination.category
+p
+  strong Price:
+  = @destination.price
+p
+  strong Discount:
+  = @destination.discount
+
+= link_to 'Edit', edit_destination_path(@destination)
+'|
+= link_to 'Back', destinations_path
