@@ -23,15 +23,18 @@
   /     .form-group
   /       = f.label :longitude
   /       = f.text_field :longitude, class: "form-control"
+  .form-group
+    = f.label :address
+    = f.text_field :address, class: "form-control"
   .row
-        .col-md-6
-          .form-group
-            = f.label :email
-            = f.text_field :email, class: "form-control"
-        .col-md-6
-          .form-group.form-group
-            = f.label :url
-            = f.text_field :url, class: "form-control"
+    .col-md-6
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: "form-control"
+    .col-md-6
+      .form-group.form-group
+        = f.label :url
+        = f.text_field :url, class: "form-control"
   .row
     .col-md-6
       .row
