@@ -2,10 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-destination_add_geocomplete_and_map = (coordinates)->
+destination_add_geocomplete_and_map = (coords)->
   location =
-    if coordinates
-      "#{coordinates.latitude},#{coordinates.longitude}"
+    if coords
+      "#{coords.latitude}, #{coords.longitude}"
     else
       'indonesia'
 
@@ -14,6 +14,10 @@ destination_add_geocomplete_and_map = (coordinates)->
     location: location
     markerOptions:
       draggable: true
+
+  $('.js-destination-address').bind 'geocode:dragged', (ev, coords) ->
+    $('.js-destination-latitude').val(coords.lat())
+    $('.js-destination-longitude').val(coords.lng())
 
 destination_get_user_coordinates = ->
   if navigator.geolocation
