@@ -80,6 +80,7 @@ source 'https://rubygems.org' do
   gem 'bootstrap-sass'
   gem 'font-awesome-sass'
   gem 'nprogress-rails'
+  gem 'geocomplete_rails'
 end
 
 # Rails-Assets for assets management
