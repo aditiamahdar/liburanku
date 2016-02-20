@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220072209) do
+ActiveRecord::Schema.define(version: 20160220074809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,13 @@ ActiveRecord::Schema.define(version: 20160220072209) do
     t.integer  "category_id"
     t.integer  "price"
     t.integer  "discount"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.time     "start_time"
     t.time     "finish_time"
     t.string   "address"
+    t.string   "phone_number"
+    t.boolean  "verified"
   end
 
   add_index "destinations", ["category_id"], name: "index_destinations_on_category_id", using: :btree
