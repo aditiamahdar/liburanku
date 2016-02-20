@@ -97,4 +97,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-confirmation2'
   # Stylesheets
   gem 'rails-assets-animate.css'
+  gem 'rails-assets-normalize-css'
 end
