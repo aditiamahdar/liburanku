@@ -1,4 +1,4 @@
-= form_for @destination do |f|
+= form_for @destination, class: 'dropzone' do |f|
   - if @destination.errors.any?
     #error_explanation
       h2 = "#{pluralize(@destination.errors.count, "error")} prohibited this destination from being saved:"
@@ -19,16 +19,6 @@
     = f.text_field :address, class: "form-control js-destination-address"
   .js-destination-map.map-style
 
-
-  / .row
-  /   .col-md-6
-  /     .form-group
-  /       = f.label :latitude
-  /       = f.text_field :latitude, class: "form-control"
-  /   .col-md-6
-  /     .form-group
-  /       = f.label :longitude
-  /       = f.text_field :longitude, class: "form-control"
   .row
     .col-md-6
       .form-group
@@ -66,10 +56,9 @@
         = image_tag "cover-dummy.png", class:"thumbnail", id: "js-cover-preview", width: '100%'
         = f.file_field :cover, class: 'js-destination_cover'
         = f.hidden_field :cover_cache
-
   hr
   .actions
-    = f.submit "Buat", class: "btn btn-primary btn-lg"
+    = f.submit "#{ @destination.id.present? ? 'Update' : 'Buat'}", class: "btn btn-primary btn-lg"
 
 javascript:
   $('#new_destination').parsley();

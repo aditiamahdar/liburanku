@@ -53,6 +53,7 @@ source 'https://rubygems.org' do
   gem 'exception_notification'
   gem 'rest-client'
   gem 'slim-rails'
+  gem 'dropzonejs-rails'
 
   # Back-end
   gem 'aasm'

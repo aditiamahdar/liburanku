@@ -21,4 +21,5 @@
  * Custom CSS
  *= require custom
  *= require destinations
+ *= require dropzone/dropzone
  */
