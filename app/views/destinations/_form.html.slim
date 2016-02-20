@@ -6,40 +6,50 @@
         - @destination.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :latitude
-    = f.text_field :latitude
-  .field
-    = f.label :longitude
-    = f.text_field :longitude
-  .field
+    = f.text_field :name, class: "form-control"
+  .row
+    .col-md-6
+      .form-group
+        = f.label :latitude
+        = f.text_field :latitude, class: "form-control"
+    .col-md-6
+      .form-group
+        = f.label :longitude
+        = f.text_field :longitude, class: "form-control"
+  .form-group
     = f.label :logo
-    = f.text_field :logo
-  .field
+    = f.file_field :logo, class: "form-control"
+  .form-group
     = f.label :cover
-    = f.text_field :cover
-  .field
+    = f.file_field :cover, class: "form-control"
+  .form-group
     = f.label :description
-    = f.text_area :description
-  .field
+    = f.text_area :description, class: "form-control"
+  .form-group
     = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :user
-    = f.text_field :user
-  .field
-    = f.label :category
-    = f.text_field :category
-  .field
-    = f.label :price
-    = f.number_field :price
-  .field
-    = f.label :discount
-    = f.number_field :discount
-  .actions = f.submit
+    = f.text_field :email, class: "form-control"
+  / .form-group
+  /   = f.label :user
+  /   = f.text_field :user, class: "form-control"
+  .row
+    .col-md-4
+      .form-group
+        = f.label :category
+        = f.select :category, CATEGORY_DESTINATIONS, {}, { class: "form-control" }
+    .col-md-8
+      .form-group.form-group
+        = f.label :url
+        = f.text_field :url, class: "form-control"
+  .row
+    .col-md-6
+      .form-group
+        = f.label :price
+        = f.number_field :price, class: "form-control"
+    .col-md-6
+      .form-group
+        = f.label :discount
+        = f.number_field :discount, class: "form-control"
+  .actions
+    = f.submit "Buat", class: "btn btn-primary btn-lg"
