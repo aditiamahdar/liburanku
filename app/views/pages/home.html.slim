@@ -1,2 +1,18 @@
-h1 Pages#home
-p Find me in app/views/pages/home.html.slim
+- content_for(:landing) do
+  .landing-liburanku
+    .dark-bg.text-center
+      h1 lorem ipsum dolor sit amet
+      h3.text-muted lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+      .col-md-8.col-md-offset-2.col-xs-12.search-destinations
+        form action="" method="GET"
+          = hidden_field_tag :latitude, nil
+          = hidden_field_tag :longitude, nil
+          .form-group
+            .col-sm-10
+              = text_field_tag :address, '', placeholder: 'Cari destinasi', class: 'form-control input-lg no-radius', autofocus: true
+            .col-sm-2
+              = button_tag class: "btn btn-primary btn-lg no-radius", name: nil, data: { disable_with: "Mencari" } do
+                i.fa.fa-search
+                |  Cari
+      .clearfix
