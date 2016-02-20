@@ -60,6 +60,9 @@ img#avatar-preview {
   -o-border-radius: 0;
   -moz-border-radius: 0;
 }
+.no-padding{
+  padding: 0 !important;
+}
 
 // home
 .pages-home{
@@ -72,6 +75,8 @@ img#avatar-preview {
     background: url(asset_path('bg.jpg')) no-repeat;
     height: 610px;
     background-size: cover;
+    background-position: 0;
+    margin-bottom: 20px;
 
     h1{
       margin: 0;
@@ -81,5 +86,13 @@ img#avatar-preview {
     .search-destinations{
       margin-top: 95px;
     }
+  }
+}
+
+// featured trip
+.featured-trips{
+  .f-trip{
+    margin: 10px 0 20px;
+    background-color: #EEE;
   }
 }
