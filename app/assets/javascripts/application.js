@@ -19,5 +19,7 @@
 //= require plugins/bootstrap-file-input
 //= require bootstrap-confirmation2
 //= require geocomplete
+//= require lodash.min
 //= require custom
 //= require parsley
+//= require destinations
