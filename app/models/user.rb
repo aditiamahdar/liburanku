@@ -8,5 +8,9 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   # Validations
-  validates :name, presence: true
+  validates :first_name, :last_name, presence: true
+
+  def name
+    [first_name, last_name].join(" ")
+  end
 end
