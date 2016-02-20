@@ -14,9 +14,14 @@
             = f.hidden_field :avatar_cache
 
           .form-group
-            = f.label "Nama", class: "col-sm-2 control-label"
+            = f.label "Nama depan", class: "col-sm-2 control-label"
             .col-sm-10
-              = f.text_field :name, autofocus: true, class: "form-control", placeholder: "Nama"
+              = f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "Nama depan"
+
+          .form-group
+            = f.label "Nama belakang", class: "col-sm-2 control-label"
+            .col-sm-10
+              = f.text_field :last_name, class: "form-control", placeholder: "Nama belakang"
 
           .form-group
             = f.label "Email", class: "col-sm-2 control-label"
