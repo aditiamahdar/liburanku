@@ -13,8 +13,10 @@ html lang="en"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  body
+  BODY class="#{params[:controller]} #{params[:controller]}-#{params[:action]}"
     = render "partials/navbar"
+
+    = yield :landing
 
     .container
       = render "partials/alerts"
@@ -28,3 +30,6 @@ html lang="en"
               li: small = term
         .pull-right
           small TheSpoiler © 2016
+
+  = yield :bottom_script
+  = yield :javascript_box

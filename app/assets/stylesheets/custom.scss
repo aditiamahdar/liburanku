@@ -55,3 +55,48 @@ img#avatar-preview {
   width: 200px;
   margin-bottom: 10px;
 }
+
+// core
+
+.no-radius{
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+}
+.no-padding{
+  padding: 0 !important;
+}
+
+// home
+.pages-home{
+  .navbar-liburanku{
+    margin-bottom: 0;
+  }
+
+  .landing-liburanku{
+    padding: 80px 100px 20px;
+    background: url(asset_path('bg.jpg')) no-repeat;
+    height: 610px;
+    background-size: cover;
+    background-position: 0;
+    margin-bottom: 20px;
+
+    h1{
+      margin: 0;
+      padding: 0;
+    }
+
+    .search-destinations{
+      margin-top: 95px;
+    }
+  }
+}
+
+// featured trip
+.featured-trips{
+  .f-trip{
+    margin: 10px 0 20px;
+    background-color: #EEE;
+  }
+}
