@@ -1,43 +1,14 @@
-h1 Listing destinations
-
-table
-  thead
-    tr
-      th Name
-      th Latitude
-      th Longitude
-      th Logo
-      th Cover
-      th Description
-      th Email
-      th Url
-      th User
-      th Category
-      th Price
-      th Discount
-      th
-      th
-      th
-
-  tbody
+.row
+  .col-md-6
     - @destinations.each do |destination|
-      tr
-        td = destination.name
-        td = destination.latitude
-        td = destination.longitude
-        td = destination.logo
-        td = destination.cover
-        td = destination.description
-        td = destination.email
-        td = destination.url
-        td = destination.user
-        td = destination.category
-        td = destination.price
-        td = destination.discount
-        td = link_to 'Show', destination
-        td = link_to 'Edit', edit_destination_path(destination)
-        td = link_to 'Destroy', destination, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Destination', new_destination_path
+      .panel.panel-default
+        .panel-body class="destination-cover"
+          / Header - Logo and Name
+          .destination-header style="background-image:url(destination-cover.jpg)"
+            ul.list-inline
+              li: img src="destination-logo.jpg" class="destination-logo img-thumbnail"
+              li: h4 = link_to destination.name, destination_path(destination)
+              li: img src="verified.png" class="verified"
+          / Body - Details and Description
+          .destination-body
+            p.text-justify = truncate(destination.description, length: 200, separator: " ", omission: "... ") { link_to "Lihat Lebih Banyak", destination_path(destination) }

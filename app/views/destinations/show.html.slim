@@ -1,42 +1,44 @@
-p#notice = notice
+ul.list-inline
+  li = link_to "Destinations", destinations_path
+  li >
+  li = @destination.name
 
-p
-  strong Name:
-  = @destination.name
-p
-  strong Latitude:
-  = @destination.latitude
-p
-  strong Longitude:
-  = @destination.longitude
-p
-  strong Logo:
-  = @destination.logo
-p
-  strong Cover:
-  = @destination.cover
-p
-  strong Description:
-  = @destination.description
-p
-  strong Email:
-  = @destination.email
-p
-  strong Url:
-  = @destination.url
-p
-  strong User:
-  = @destination.user
-p
-  strong Category:
-  = @destination.category
-p
-  strong Price:
-  = @destination.price
-p
-  strong Discount:
-  = @destination.discount
+.row
+  / Main Content
+  .col-md-8
+    .panel.panel-default
+      .panel-body class="destination-cover"
+        / Header
+        .destination-header-show style="background-image:url(../destination-cover.jpg)"
+          ul.list-inline
+            li: img src="../destination-logo.jpg" class="destination-logo img-thumbnail"
+        / Body
+        .destination-body
+          p.text-justify = @destination.description
+  / Sidebar
+  .col-md-4
+    .panel.panel-default
+      .panel-body
+        ul.list-inline
+          li: h4 = @destination.name
+          li: img src="../verified.png" class="verified"
+        hr
+        p
+          i.fa.fa-detail.fa-link
+          = link_to @destination.url, @destination.url, target: "_blank"
+        p
+          i.fa.fa-detail.fa-money
+          = number_to_currency(@destination.price, unit: "Rp. ", precision: 0, delimiter: ".")
+          = " / Tiket"
+        p
+          i.fa.fa-detail.fa-envelope
+          = @destination.email
+        p
+          i.fa.fa-detail.fa-user
+          = @destination.user.name
 
-= link_to 'Edit', edit_destination_path(@destination)
-'|
-= link_to 'Back', destinations_path
+  / Sidebar
+  .col-md-4
+    .panel.panel-default
+      .panel-body
+        = link_to "Beli Tiket", "javascript:void(0)", class: "btn btn-primary btn-block btn-lg"

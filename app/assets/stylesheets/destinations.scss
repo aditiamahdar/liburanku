@@ -1,3 +1,33 @@
 // Place all the styles related to the destinations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.destination-header {
+  height: 140px;
+  padding: 20px;
+  background-size: cover;
+}
+
+.destination-header-show {
+  height: 300px;
+  padding: 20px;
+  background-size: cover;
+}
+
+img.destination-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.destination-cover {
+  padding: 0;
+}
+
+.destination-body {
+  padding: 20px;
+}
+
+.fa-detail {
+  width: 30px;
+  text-align: center;
+}
