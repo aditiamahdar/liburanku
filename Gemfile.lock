@@ -253,6 +253,7 @@ GEM
     rails-assets-bootstrap-confirmation2 (2.2.0)
       rails-assets-bootstrap (>= 3.2.0)
     rails-assets-jquery (2.2.0)
+    rails-assets-normalize-css (3.0.3)
     rails-assets-parsleyjs (2.3.3)
       rails-assets-jquery (> 1.8)
     rails-deprecated_sanitizer (1.0.3)
@@ -438,6 +439,7 @@ DEPENDENCIES
   rails-assets-Bootflat!
   rails-assets-animate.css!
   rails-assets-bootstrap-confirmation2!
+  rails-assets-normalize-css!
   rails-assets-parsleyjs!
   rails_best_practices!
   redis!
