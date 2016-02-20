@@ -8,27 +8,17 @@
 
   .form-group
     = f.label :name
-<<<<<<< HEAD
     = f.text_field :name, class: "form-control", required: true, data: { parsley_minlength:"2", parsley_trigger: 'keyup change', parsley_validation_threshold: "0"}
-
-=======
-    = f.text_field :name, class: "form-control"
+  .form-group
+    = f.label :description
+    = f.text_area :description, class: "form-control"
   .form-group
     = f.label :address
     = f.hidden_field :latitude, class: "js-destination-latitude"
     = f.hidden_field :longitude, class: "js-destination-longitude"
     = f.text_field :address, class: "form-control js-destination-address"
   .js-destination-map.map-style
-  .form-group
-    = f.label :logo
-    = f.file_field :logo, class: "form-control"
-  .form-group
-    = f.label :cover
-    = f.file_field :cover, class: "form-control"
->>>>>>> 2275ef7c311f91ffd3490fe6d29a19cd53c2d837
-  .form-group
-    = f.label :description
-    = f.text_area :description, class: "form-control"
+
 
   / .row
   /   .col-md-6
@@ -39,9 +29,6 @@
   /     .form-group
   /       = f.label :longitude
   /       = f.text_field :longitude, class: "form-control"
-  .form-group
-    = f.label :address
-    = f.text_field :address, class: "form-control", required: true, data: { parsley_minlength:"2", parsley_trigger: 'keyup change', parsley_validation_threshold: "0"}
   .row
     .col-md-6
       .form-group
