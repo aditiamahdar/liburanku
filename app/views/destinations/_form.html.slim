@@ -8,7 +8,7 @@
 
   .form-group
     = f.label :name
-    = f.text_field :name, class: "form-control"
+    = f.text_field :name, class: "form-control", required: true, data: { parsley_minlength:"2", parsley_trigger: 'keyup change', parsley_validation_threshold: "0"}
 
   .form-group
     = f.label :description
@@ -25,12 +25,12 @@
   /       = f.text_field :longitude, class: "form-control"
   .form-group
     = f.label :address
-    = f.text_field :address, class: "form-control"
+    = f.text_field :address, class: "form-control", required: true, data: { parsley_minlength:"2", parsley_trigger: 'keyup change', parsley_validation_threshold: "0"}
   .row
     .col-md-6
       .form-group
         = f.label :email
-        = f.text_field :email, class: "form-control"
+        = f.email_field :email, class: "form-control"
     .col-md-6
       .form-group.form-group
         = f.label :url
@@ -41,14 +41,14 @@
         .col-md-8
           .form-group
             = f.label :price
-            = f.number_field :price, class: "form-control"
+            = f.number_field :price, class: "form-control", required: true
         .col-md-4
           .form-group
             = f.label :discount, 'Discount (%)'
             = f.number_field :discount, class: "form-control"
       .form-group
         = f.label :category
-        = f.select :category, CATEGORY_DESTINATIONS, {}, { class: "form-control" }
+        = f.select :category, CATEGORY_DESTINATIONS, {}, { class: "form-control", required: true }
 
   h4 Logo & Cover
   hr
@@ -69,6 +69,7 @@
     = f.submit "Buat", class: "btn btn-primary btn-lg"
 
 javascript:
+  $('#new_destination').parsley();
   $(".js-destination_logo").bootstrapFileInput();
   $(".js-destination_logo").change(function() {
     readUploadedPicture(this, "#js-logo-preview");

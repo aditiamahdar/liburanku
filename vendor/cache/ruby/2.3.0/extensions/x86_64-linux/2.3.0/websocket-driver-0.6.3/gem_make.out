@@ -1,0 +1,15 @@
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.6.3/ext/websocket-driver
+/home/studio/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160220-4665-2z1m40.rb extconf.rb
+creating Makefile
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.6.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.6.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/websocket-driver-0.6.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20160220-4665-1s4nxjn

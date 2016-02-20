@@ -20,3 +20,4 @@
 //= require bootstrap-confirmation2
 //= require geocomplete
 //= require custom
+//= require parsley

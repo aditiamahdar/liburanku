@@ -1,0 +1,77 @@
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/puma-2.16.0/ext/puma_http11
+/home/studio/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160220-4665-1t3idqu.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/extensions/x86_64-linux/2.3.0/puma-2.16.0/mkmf.log
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/puma-2.16.0/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/puma-2.16.0/ext/puma_http11
+make "DESTDIR="
+compiling io_buffer.c
+io_buffer.c: In function ‘buf_to_str’:
+io_buffer.c:119:3: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+   return rb_str_new(b->top, b->cur - b->top);
+   ^
+In file included from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/ruby.h:1985:0,
+                 from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby.h:33,
+                 from io_buffer.c:2:
+/home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/intern.h:729:7: note: expected ‘const char *’ but argument is of type ‘uint8_t *’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+io_buffer.c:119:3: warning: pointer targets in passing argument 1 of ‘rb_str_new’ differ in signedness [-Wpointer-sign]
+   return rb_str_new(b->top, b->cur - b->top);
+   ^
+In file included from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/ruby.h:1985:0,
+                 from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby.h:33,
+                 from io_buffer.c:2:
+/home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/intern.h:708:7: note: expected ‘const char *’ but argument is of type ‘uint8_t *’
+ VALUE rb_str_new(const char*, long);
+       ^
+compiling puma_http11.c
+compiling http11_parser.c
+In file included from ext/http11/http11_parser.rl:7:0:
+ext/http11/http11_parser.rl: In function ‘puma_parser_execute’:
+ext/http11/http11_parser.rl:111:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+compiling mini_ssl.c
+In file included from mini_ssl.c:4:0:
+/home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/backward/rubyio.h:2:2: warning: #warning use "ruby/io.h" instead of "rubyio.h" [-Wcpp]
+ #warning use "ruby/io.h" instead of "rubyio.h"
+  ^
+mini_ssl.c: In function ‘engine_init_server’:
+mini_ssl.c:155:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   DH *dh = get_dh1024();
+   ^
+mini_ssl.c:159:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   EC_KEY *ecdh = EC_KEY_new_by_curve_name(NID_secp521r1);
+   ^
+mini_ssl.c: In function ‘engine_peercert’:
+mini_ssl.c:350:3: warning: pointer targets in passing argument 1 of ‘rb_str_new_static’ differ in signedness [-Wpointer-sign]
+   rb_cert_buf = rb_str_new(buf, bytes);
+   ^
+In file included from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/ruby.h:1985:0,
+                 from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby.h:33,
+                 from mini_ssl.c:3:
+/home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/intern.h:729:7: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ VALUE rb_str_new_static(const char *, long);
+       ^
+mini_ssl.c:350:3: warning: pointer targets in passing argument 1 of ‘rb_str_new’ differ in signedness [-Wpointer-sign]
+   rb_cert_buf = rb_str_new(buf, bytes);
+   ^
+In file included from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/ruby.h:1985:0,
+                 from /home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby.h:33,
+                 from mini_ssl.c:3:
+/home/studio/.rvm/rubies/ruby-2.3.0/include/ruby-2.3.0/ruby/intern.h:708:7: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ VALUE rb_str_new(const char*, long);
+       ^
+linking shared-object puma/puma_http11.so
+
+current directory: /home/studio/workdimension/liburanku/vendor/cache/ruby/2.3.0/gems/puma-2.16.0/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -m 0755 puma_http11.so ./.gem.20160220-4665-1fjwfi5/puma
