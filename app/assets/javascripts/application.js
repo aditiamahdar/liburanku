@@ -21,4 +21,5 @@
 //= require geocomplete
 //= require lodash.min
 //= require custom
+//= require parsley
 //= require destinations

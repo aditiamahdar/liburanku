@@ -12,7 +12,7 @@ nav.navbar.navbar-default.navbar-static-top.navbar-liburanku
       ul.nav.navbar-nav
         - if user_signed_in?
           li = link_to "Dashboard", root_path
-          li = link_to "Destination", destinations_path
+          li = link_to "Destinations", destinations_path
         - else
           li = link_to "Fitur", features_path
           li = link_to "Bantuan", help_path

@@ -8,45 +8,80 @@
 
   .form-group
     = f.label :name
-    = f.text_field :name, class: "form-control"
+    = f.text_field :name, class: "form-control", required: true, data: { parsley_minlength:"2", parsley_trigger: 'keyup change', parsley_validation_threshold: "0"}
+  .form-group
+    = f.label :description
+    = f.text_area :description, class: "form-control"
   .form-group
     = f.label :address
     = f.hidden_field :latitude, class: "js-destination-latitude"
     = f.hidden_field :longitude, class: "js-destination-longitude"
     = f.text_field :address, class: "form-control js-destination-address"
   .js-destination-map.map-style
-  .form-group
-    = f.label :logo
-    = f.file_field :logo, class: "form-control"
-  .form-group
-    = f.label :cover
-    = f.file_field :cover, class: "form-control"
-  .form-group
-    = f.label :description
-    = f.text_area :description, class: "form-control"
-  .form-group
-    = f.label :email
-    = f.text_field :email, class: "form-control"
+
+
+  / .row
+  /   .col-md-6
+  /     .form-group
+  /       = f.label :latitude
+  /       = f.text_field :latitude, class: "form-control"
+  /   .col-md-6
+  /     .form-group
+  /       = f.label :longitude
+  /       = f.text_field :longitude, class: "form-control"
   .row
-    .col-md-4
+    .col-md-6
       .form-group
-        = f.label :category
-        = f.select :category, CATEGORY_DESTINATIONS, {}, { class: "form-control" }
-    .col-md-8
+        = f.label :email
+        = f.email_field :email, class: "form-control"
+    .col-md-6
       .form-group.form-group
         = f.label :url
         = f.text_field :url, class: "form-control"
   .row
     .col-md-6
+      .row
+        .col-md-8
+          .form-group
+            = f.label :price
+            = f.number_field :price, class: "form-control", required: true
+        .col-md-4
+          .form-group
+            = f.label :discount, 'Discount (%)'
+            = f.number_field :discount, class: "form-control"
       .form-group
-        = f.label :price
-        = f.number_field :price, class: "form-control"
-    .col-md-6
+        = f.label :category
+        = f.select :category, CATEGORY_DESTINATIONS, {}, { class: "form-control", required: true }
+
+  h4 Logo & Cover
+  hr
+  .row
+    .col-xs-4
       .form-group
-        = f.label :discount
-        = f.number_field :discount, class: "form-control"
+        = image_tag "log-dummy.png", class:"thumbnail", id: "js-logo-preview", width: '100%'
+        = f.file_field :logo, class: 'js-destination_logo'
+        = f.hidden_field :logo_cache
+    .col-xs-8
+      .form-group
+        = image_tag "cover-dummy.png", class:"thumbnail", id: "js-cover-preview", width: '100%'
+        = f.file_field :cover, class: 'js-destination_cover'
+        = f.hidden_field :cover_cache
+
+  hr
   .actions
     = f.submit "Buat", class: "btn btn-primary btn-lg"
+
+javascript:
+  $('#new_destination').parsley();
+  $(".js-destination_logo").bootstrapFileInput();
+  $(".js-destination_logo").change(function() {
+    readUploadedPicture(this, "#js-logo-preview");
+  });
+
+  $(".js-destination_cover").bootstrapFileInput();
+  $(".js-destination_cover").change(function() {
+    readUploadedPicture(this, "#js-cover-preview");
+  });
 
 - content_for :javascript_box
   = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places', 'data-turbolinks-track' => true, defer: true, class: 'google-map-element'
