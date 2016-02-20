@@ -17,8 +17,11 @@
  *= require nprogress-bootstrap
  *= require bootstrap-social
  *= require parsley
+
+ *= require normalize-css
  *
  * Custom CSS
  *= require custom
  *= require destinations
+ *= require pages
  */
