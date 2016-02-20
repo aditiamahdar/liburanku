@@ -11,7 +11,10 @@
     = f.text_field :name, class: "form-control"
   .form-group
     = f.label :address
-    = f.text_field :address, class: "form-control"
+    = f.hidden_field :latitude, class: "js-destination-latitude"
+    = f.hidden_field :longitude, class: "js-destination-longitude"
+    = f.text_field :address, class: "form-control js-destination-address"
+  .js-destination-map.map-style
   .form-group
     = f.label :logo
     = f.file_field :logo, class: "form-control"
@@ -44,3 +47,6 @@
         = f.number_field :discount, class: "form-control"
   .actions
     = f.submit "Buat", class: "btn btn-primary btn-lg"
+
+- content_for :javascript_box
+  = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?libraries=places', 'data-turbolinks-track' => true, defer: true, class: 'google-map-element'
