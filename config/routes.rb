@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :destination_images
-  resources :destinations
-  resources :categories
   root to: 'pages#home'
 
   # Devise
@@ -13,4 +10,8 @@ Rails.application.routes.draw do
   get 'help', to: 'pages#help'
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
+
+  resources :destination_images
+  resources :destinations
+  resources :categories
 end
