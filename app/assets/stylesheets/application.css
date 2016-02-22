@@ -17,6 +17,7 @@
  *= require nprogress-bootstrap
  *= require bootstrap-social
  *= require parsley
+ *= require bootstrap-datepicker3
  *
  * Custom CSS
  *= require custom

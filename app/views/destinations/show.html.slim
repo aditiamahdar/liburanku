@@ -41,4 +41,33 @@ ul.list-inline
   .col-md-4
     .panel.panel-default
       .panel-body
-        = link_to "Beli Tiket", "javascript:void(0)", class: "btn btn-primary btn-block btn-lg"
+        .input-group
+          input.form-control.input-lg placeholder="Jumlah"
+          span.input-group-btn
+            = link_to "Beli Tiket", "javascript:void(0)", class: "btn btn-primary btn-lg", data: { target: "#buy-ticket", toggle: "modal" }
+
+/ Buy Ticket
+#buy-ticket.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true" &times;
+        h4#myModalLabel.modal-title = "Buy Ticket for #{@destination.name}"
+      .modal-body
+        = form_for @destination do |f|
+          .form-group
+            = f.label "Harga"
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label "Jumlah"
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label "Tanggal"
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label "Total"
+            = f.text_field :name, class: "form-control"
+      .modal-footer
+        button.btn.btn-default data-dismiss="modal" type="button" Tutup
+        button.btn.btn-primary type="button" Beli
