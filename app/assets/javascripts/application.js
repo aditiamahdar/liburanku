@@ -23,3 +23,4 @@
 //= require custom
 //= require parsley
 //= require destinations
+//= require dropzone

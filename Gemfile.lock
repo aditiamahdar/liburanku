@@ -123,6 +123,8 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.20160128)
       unf (>= 0.0.5, < 1.0.0)
+    dropzonejs-rails (0.7.2)
+      rails (> 3.1)
     erubis (2.7.0)
     exception_notification (4.1.4)
       actionmailer (~> 4.0)
@@ -253,6 +255,7 @@ GEM
     rails-assets-bootstrap-confirmation2 (2.2.0)
       rails-assets-bootstrap (>= 3.2.0)
     rails-assets-jquery (2.2.0)
+    rails-assets-normalize-css (3.0.3)
     rails-assets-parsleyjs (2.3.3)
       rails-assets-jquery (> 1.8)
     rails-deprecated_sanitizer (1.0.3)
@@ -409,6 +412,7 @@ DEPENDENCIES
   config!
   database_cleaner!
   devise!
+  dropzonejs-rails!
   exception_notification!
   factory_girl_rails!
   faker!
@@ -438,6 +442,7 @@ DEPENDENCIES
   rails-assets-Bootflat!
   rails-assets-animate.css!
   rails-assets-bootstrap-confirmation2!
+  rails-assets-normalize-css!
   rails-assets-parsleyjs!
   rails_best_practices!
   redis!

@@ -18,8 +18,11 @@
  *= require bootstrap-social
  *= require parsley
  *= require bootstrap-datepicker3
+ *= require normalize-css
  *
  * Custom CSS
  *= require custom
  *= require destinations
+ *= require dropzone/dropzone
+ *= require pages
  */

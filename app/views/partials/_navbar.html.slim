@@ -25,7 +25,7 @@ nav.navbar.navbar-default.navbar-static-top.navbar-liburanku
           li.dropdown
             a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
               = image_tag current_user.avatar.thumb, class: "img-circle avatar-nav"
-              = current_user.name
+              = current_user.first_name
               span.caret
             ul.dropdown-menu
               li = link_to "Edit Profile", edit_user_registration_path
