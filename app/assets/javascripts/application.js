@@ -21,6 +21,7 @@
 //= require geocomplete
 //= require lodash.min
 //= require custom
+//= require noncoffee
 //= require parsley
 //= require destinations
 //= require dropzone

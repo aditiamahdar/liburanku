@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220074809) do
+ActiveRecord::Schema.define(version: 20160220083954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,19 @@ ActiveRecord::Schema.define(version: 20160220074809) do
   add_index "destinations", ["category_id"], name: "index_destinations_on_category_id", using: :btree
   add_index "destinations", ["user_id"], name: "index_destinations_on_user_id", using: :btree
 
+  create_table "tickets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "destination_id"
+    t.integer  "price"
+    t.integer  "quantity"
+    t.datetime "ticket_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "tickets", ["destination_id"], name: "index_tickets_on_destination_id", using: :btree
+  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "first_name",             default: "", null: false
@@ -89,4 +102,6 @@ ActiveRecord::Schema.define(version: 20160220074809) do
   add_foreign_key "destination_images", "destinations"
   add_foreign_key "destinations", "categories"
   add_foreign_key "destinations", "users"
+  add_foreign_key "tickets", "destinations"
+  add_foreign_key "tickets", "users"
 end
