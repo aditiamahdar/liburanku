@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :tickets, dependent: :nullify
+  has_many :destinations, dependent: :nullify
 
   # Image Attachement
   mount_uploader :avatar, AvatarUploader

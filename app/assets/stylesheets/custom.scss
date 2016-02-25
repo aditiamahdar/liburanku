@@ -28,6 +28,10 @@ body {
   margin-bottom: 40px;
 }
 
+.white {
+  color: $white;
+}
+
 @import "navbar";
 
 // Override NProgress

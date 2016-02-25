@@ -9,9 +9,9 @@ ul.list-inline
     .panel.panel-default
       .panel-body class="destination-cover"
         / Header
-        .destination-header-show style="background-image:url(../destination-cover.jpg)"
+        .destination-header-show style=("background-image:url(#{asset_path'destination-cover.jpg'})")
           ul.list-inline
-            li: img src="../destination-logo.jpg" class="destination-logo img-thumbnail"
+            li = image_tag("destination-logo.jpg", class:"destination-logo img-thumbnail")
         / Body
         .destination-body
           p.text-justify = @destination.description
@@ -21,7 +21,8 @@ ul.list-inline
       .panel-body
         ul.list-inline
           li: h4 = @destination.name
-          li: img src="../verified.png" class="verified"
+          - if @destination.verified
+            li = image_tag("verified.png", class: "verified")
         hr
         p
           i.fa.fa-detail.fa-link
@@ -31,11 +32,17 @@ ul.list-inline
           = number_to_currency(@destination.price, unit: "Rp. ", precision: 0, delimiter: ".")
           = " / Tiket"
         p
-          i.fa.fa-detail.fa-envelope
-          = @destination.email
+          i.fa.fa-detail.fa-map-marker
+          = @destination.address
         p
           i.fa.fa-detail.fa-user
           = @destination.user.name
+        p
+          i.fa.fa-detail.fa-envelope
+          = @destination.email
+        p
+          i.fa.fa-detail.fa-phone
+          = @destination.phone_number
 
   / Sidebar
   .col-md-4
