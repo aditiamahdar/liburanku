@@ -17,10 +17,6 @@
           div role="tabpanel" class="tab-pane fade in active" id="form"
             == render 'form'
           div role="tabpanel" class="tab-pane fade" id="images"
-            .js-image-preview.row
-              - @destination.destination_images.each do |image|
-                div class="col-md-3 thumbnail"
-                  = image_tag image.destination_image, height:"163px", width: '100%'
             h4 Destination images
             hr
             = form_for(DestinationImage.new, html: { multipart: true, class: "js-dropzone"}) do |image|
@@ -29,11 +25,20 @@
                 .dz-default.dz-message data-dz-message=''
                   span.glyphicon.glyphicon-picture
                   h4 Drop image di area ini
+                hr
+                .js-dropzone.row
+                  - @destination.destination_images.each do |image|
+                    div class="col-md-4 thumbnail" style='width:25%;overflow:hidden;'
+                      a href='#' style="float: right;border: 1px solid #3bafda;border-radius: 100%;padding: 0px 5px;" x
+                      hr style="margin: 13px 4px;"
+                      = image_tag image.destination_image, style:'height: 88px'
+                    .js-image-preview
+
 javascript:
   var uploader = new Dropzone('.js-dropzone', {
     paramName: "destination_image[destination_image]",
     parallelUploads: 1,
     acceptedFiles: 'image/*',
     previewsContainer: '.js-image-preview',
-    previewTemplate: '<div class="dz-preview dz-file-preview col-sm-3"> <img data-dz-thumbnail class="thumbnail" width="100%" height="163px"style="margin-bottom: 0px"/><div class="dz-progress"><span class="dz-upload progress-bar progress-bar-primary" role="progressbar" style="height: 1rem;" data-dz-uploadprogress></span></div></div>'
+    previewTemplate: '<div class="col-md-4 thumbnail dz-preview dz-file-preview"style="width:25%;overflow:hidden;"><div class="dz-details"><div class="dz-error-mark panel-heading"><a href="#" style="float: right;border: 1px solid #3bafda;border-radius: 100%;padding: 0px 5px;">✘</a><hr style="margin: 13px 4px;"></div><img data-dz-thumbnail style="height: 88px"/></div><div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div</div><div class="dz-error-message"><span data-dz-errormessage></span></div></div>'
   })
